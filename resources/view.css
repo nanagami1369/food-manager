@@ -1,0 +1,68 @@
+div.calendar{
+	float: left;
+}
+table{
+	border-collapse: collapse;
+	border: 0px black;
+}
+td.day{
+	text-align: center;
+}
+td.shop{
+	table-layout: fixed;
+	width: 130px;
+}
+td.food{
+	table-layout: fixed;
+	width: 160px;
+}
+table td.price {
+	table-layout: fixed;
+	width: 70px;
+	text-align: end;
+}
+div.gool {
+	float:left;
+	position: absolute;
+	top: 27px;
+	left:470px;
+}
+input.gool{
+	position: relative;
+	width: 80px;
+}
+
+div.form{
+	float: left  ;
+	position: absolute;
+	left: 350pt;
+	top:225px;
+}
+p.timedate{
+	position: relative;
+	top :60px;
+	left:30px;
+	font-weight: 400;
+	font-size: 40px;
+}
+input.move{
+	position: relative;
+	top: -5px;
+	left: -2px;
+	font-weight: 400;
+	font-size: 25px;
+}
+div.button{
+	position: relative;
+	top: -20px;
+	left: 260px;
+}
+p.message{
+	position: relative;
+	top: 10px;
+}
+p.return{
+	position: relative;
+	left : 90px;
+	top :20px;
+}
