@@ -15,7 +15,7 @@
 			{{range $index, $week := .Weekday}}
 			{{if eq $week 1}}
 				<tr>
-					<td class="day"><span style="color:#ff0000;">{{index $.Day $index}}</span></td><td class="shop">{{index $.Shop $index}}</td><th class="food">{{index $.Food $index}}</td><td class="price">{{index $.Price $index}}円</td>
+					<td class="day"><span style="color:#ff0000;">{{index $.Day $index}}</span></td><td class="shop">{{index $.Shop $index}}</td><td class="food">{{index $.Food $index}}</td><td class="price">{{index $.Price $index}}円</td>
 				</tr>
 			{{else if eq $week 2}}
 				<tr>
@@ -41,6 +41,7 @@
 		<form action="" method="POST">
 				<p class="timedate"><input class="move" type="submit" name="operation" value="&lt;">{{.Times.Year}}年{{.Times.Month}}月<input class="move" type="submit" name="operation" value="&gt;"></p>
 		</form>
+
 		<form action="" method="POST">
 			{{if or (eq .Messegest.Date "登録") (eq .Messegest.Date "修正") }}
 				<br>店&emsp;&emsp;&emsp;&emsp;<input type="text" name="shop">
@@ -48,7 +49,7 @@
 				<br>値段&emsp;&emsp;&ensp;&ensp;<input type="number" name="price">円
 				<div class="button"><br><input type="submit" value="{{.Messegest.Date}}"></div>
 			{{else}}
-				<p class="return"><input  type="submit" value="&ensp;現在の月に戻る&ensp;" name="operation"><p>
+				<p class="return"><input  type="submit" value="&ensp;現在の月に戻る&ensp;" name="operation"></p>
 			{{end}}
 			{{if eq  .Messegest.Err "警告"}}
 					<p class="message"><span style="color:#ff0000;">{{.Messege}}</span></p>
