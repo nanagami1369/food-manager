@@ -206,6 +206,7 @@ func viewHandler(w http.ResponseWriter, r *http.Request) {
 	//目標入力
 	err = db.QueryRow(fmt.Sprint("select month from gool;")).Scan(&month)
 	if err != nil {
+		fmt.Println("not gool")
 		fmt.Println(err)
 	}
 	Calenders.Gool = month
@@ -229,6 +230,7 @@ func viewHandler(w http.ResponseWriter, r *http.Request) {
 			//値の更新を入れる
 			err = db.QueryRow(fmt.Sprint("select month from gool;")).Scan(&month)
 			if err != nil {
+				fmt.Println("not manth")
 				fmt.Println(err)
 			}
 			Calenders.Gool = month
